@@ -8,5 +8,6 @@
           border: 5px solid teal;
           height: 100px;
           width:400px;
+          overflow: auto;
         }
                

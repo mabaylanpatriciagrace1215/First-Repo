@@ -11,13 +11,13 @@
         }
         #box2{
             background-color: rgb(30, 146, 107);
-            width: 30%;
+            width: 15%;
             height: 70%;
             float: left;
         }
         #box3{
             background-color: rgb(115, 202, 173);
-            width: 70%;
+            width: 85%;
             height: 70%;
             float: right;
         }

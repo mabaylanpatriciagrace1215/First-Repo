@@ -9,4 +9,10 @@
 
 .alternate {
         box-sizing: border-box;
+        width: 440px;
+        height: 240px;
+        padding: 40px;
+        border: 5px solid teal;
+        background-color: #A5CFE3;
+        margin: 40px;
       }

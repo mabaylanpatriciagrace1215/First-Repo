@@ -7,25 +7,28 @@
         }
         #box1{
             background-color: teal;
-
+            height: 80px;
+            line-height: 80px;
         }
         #box2{
             background-color: rgb(30, 146, 107);
-            height: 75%;
-            width: 10%;
+            width: 25%;
+            height: 300px;
             float: left;
-            clear: left;
+            line-height: 300px;
         }
         #box3{
             background-color: rgb(115, 202, 173);
-            height: 50%;
             width: 75%;
-            float: right;
-            clear: right;
+            height: 300px;
+            float: left;
+            line-height: 300px;
         }
         #box4{
             background-color: rgb(21, 109, 80);
-
+            height: 80px;
+            line-height: 80px;
+            clear: both;
         }
                
     

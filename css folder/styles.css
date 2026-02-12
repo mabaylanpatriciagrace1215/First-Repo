@@ -27,6 +27,8 @@
 .nav{
   background-color: teal; 
   list-style-type: none;
+  text-align: center;
+  position: fixed; top:0; width:100%;
 }
 .nav li{
   display: inline-block;

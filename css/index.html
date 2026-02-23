@@ -40,7 +40,7 @@
         fetch(jsonURL1)
         .then(response => response.json())
         .then(data => {
-            const container = document.getElementById('course-container');
+            const container = document.getElementById('course-list');
 
             data.courses.forEach(course => {
                 const courseCard = document.createElement('div');
@@ -150,7 +150,6 @@
             <hr>
             <h2>Course List</h2>
             <ul id="course-list" class="card-body"></p>
-            
         </div>
 
         <div class="card" id="contact">

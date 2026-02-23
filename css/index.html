@@ -13,7 +13,7 @@
         console.log(paragraph1);
         console.log(paragraph2)
 
-        // Replace with your JSON file URL
+        // Replace with your JSON file URL - students
         const jsonURL = "https://raw.githubusercontent.com/mabaylanpatriciagrace1215/First-Repo/main/css%20folder/students.json";
 
         fetch(jsonURL)
@@ -33,6 +33,30 @@
             }
         })
         .catch(error => console.error("Error fetching JSON:", error));
+
+        // for course list
+        const jsonURL = "https://raw.githubusercontent.com/mabaylanpatriciagrace1215/First-Repo/main/css/courses.json";
+
+        fetch('courses.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('course-container');
+
+            data.courses.forEach(course => {
+                const courseCard = document.createElement('div');
+                courseCard.classList.add('course-card');
+
+            courseCard.innerHTML = `
+            <h3>${course.code} - ${course.description}</h3>
+            <p><strong>Year Level:</strong> ${course.year_level}</p>
+            <p><strong>Semester:</strong> ${course.sem}</p>
+            <p><strong>Credits:</strong> ${course.credit}</p>
+            `;
+
+            container.appendChild(courseCard);
+            });
+        })
+        .catch(error => console.error('Error loading JSON:', error));
     </script>
     <title>Curriculum Vitae</title>
 </head>
@@ -123,6 +147,9 @@
                     </figure>
                 </li>
             </ol>
+
+            <h2>Course List</h2>
+            <ul id="course-list" class="card-body"></p>
             <hr>
         </div>
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Online CV</title> <!--not the formal boilerplate template-->
+
+    <link rel="stylesheet" href="styles.css" media="screen">  <!--lacking 'media="screen"''-->
+
+</head>
+
+<body>
+    <header>
+        <h1>My Portfolio</h1> <!--no closing of </h1>-->
+    </header>
+
+    <ul class="nav">     <!--no closing of </li>-->
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="container"></div> <!--no closing??-->
+
+    <div class="card" id="about">
+        <h2>About Me</h2> <!--h2 tapos h3???-->
+        <p>I am future IT professional</p><br>
+        <img src="shrek.jpg" width="250" height="350"><br> <!--no image-->
+    </div>
+
+    <div class="card" id="skills"> <!--no closing of li-->
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+    <div class="card" id="contact">
+        <h2>Contact</h2>
+
+        <form action="send.php" method="POST">
+        <label for="FullName">Name</label><br>         <!--<label FOR>-->
+        <input type="text" id="FullName" name="name"> <!--lacking ID-->
+        <br> <!--breaklines-->
+
+        <label for="Email">Email</label><br>        <!--<label FOR>-->
+        <input type="email" id="Email" name="email"><br>
+
+        <!--unused text area-->
+        <!--Trial-->
+        <label for="Message">Message</label><br>
+        <textarea>
+        </textarea> <br>
+
+        <button type="send" value="send">Send</button> <br><!--needs type and value-->
+        </form>
+    </div>
+
+<footer>
+<p>2026 All Rights Reserved</p> <!--no closing of </p>-->
+</footer>
+
+</body>
+</html>

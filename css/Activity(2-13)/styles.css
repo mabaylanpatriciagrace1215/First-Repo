@@ -1,0 +1,41 @@
+body {
+font-family: Arial;      /*missing semi-colon*/
+margin: 0;
+}
+
+.nav {
+background-color: teal;      /*missing semi-colon*/
+list-style-type: none;       /*missing colon*/
+text-align: center;          /*missing colon*/
+position: absolute;     /*missing colon*/
+top: 0;
+width: 100%;     /*missing colon*/
+}
+
+.nav li {
+display: inline-block;          /*lacking '-'*/
+padding: 20px;
+}
+
+.nav li a {
+color: white;
+text-decoration: none;       /*missing colon*/
+}
+
+.container {
+display: flex;       /*missing colon*/
+justify-content: center;     /*missing colon*/
+}
+
+.card {
+width: 70%;      /*missing s-colon*/
+margin: auto; 
+margin-top: 2%;           /*missing colon*/
+border: 3px solid teal;      /*missing s-colon*/
+padding: 20px;               /*missing colon*/
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);               /*missing colon*/
+}
+
+.card:hover {
+box-shadow: 0 8px 16px rgba(0,0,0,0.3);          /*missing colon and dash*/
+}

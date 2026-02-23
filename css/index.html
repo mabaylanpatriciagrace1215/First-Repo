@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css" media="screen">
+    <link rel="stylesheet" href="resets.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen">
+    <script>
+        alert("Hello World! I am an alert box.")
+        const paragraph1 = document.getElementById("para1")
+        const paragraph2 = document.getElementById("para2")
+        console.log(paragraph1);
+        console.log(paragraph2)
+    </script>
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <figure>
+        <img src="mabaylan.jpg" alt="Profile Image" width="200" class="center-img">
+    </figure>
+
+    <ul class="nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li> 
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <br>
+    </ul>
+
+    <div class="page-content">
+        <div class="card" id="about">
+            <p class="card-header">About<br>Hello! Tell us about yourself</p>
+            <h4 class="card-body">Patricia Grace E. Mabaylan</h4><p>2nd Year I.T. Student</p><br>
+            <p>
+                I am a person who is hardworking and am an eager learner. 
+                I am open minded especially in a work environment as a young adult. 
+                I am a student who is eager about MySQL, design, and developing solutions that support environmental sustainability.
+            </p>
+        </div>
+
+        <div class="card" id="education">
+            <p class="card-header">Education<br>Tell us about your education</p>
+            <h4 class="card-body">Bachelor of Science in Information Technology</h4>
+            <p>
+                University of Science and Technology of Southern Philippines (USTP) <br>
+                2024 - Present<br>
+                Dean's Lister (3 semesters)
+            </p>
+        </div>
+
+        <div class="card" id="skills">
+            <p class="card-header">Skills<br>Tell us about your IT skills</p>
+            <h4 class="card-body">Information Technology</h4>
+            <ol>
+                <li>
+                    <h3>Programming: </h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>MySQL</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>HTML</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <h3>Design: </h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Wireframing</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <h3>Others: </h3>
+                    <ul>
+                        <li>Problem-solving</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="card" id="portfolio">
+            <p class="card-header">Portfolio<br>Share your IT projects</p>
+            <h4 class="card-body">IT projects</h4>
+            <ol>
+                <li><h4>Simple Email System</h4>
+                    <p>
+                        A basic email system developed with object-oriented programming as its foundation, 
+                        demonstrating structured classes, encapsulation, and efficient code organization.
+                    </p><br>
+                    <p><strong>Language:</strong> Java</p>
+                    <figure>
+                        <img src="emailsystem.png" alt="Email System Screenshot" width="250">
+                        <figcaption>Email System Project</figcaption>
+                    </figure>
+                </li>
+            </ol>
+            <hr>
+        </div>
+
+        <div class="card" id="contact">
+            <p class="card-header">Contact</p>
+            <address>
+                <p>Email: mabaylan.patriciagrace1215@gmail.com</p>
+                <p>Phone: 09924137646</p>
+                <p>GitHub: https://github.com/mabaylanpatriciagrace1215</p>
+            </address>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Patricia Grace E. Mabaylan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

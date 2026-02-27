@@ -7,32 +7,36 @@
     <link rel="stylesheet" href="resets.css" media="screen">
     <link rel="stylesheet" href="styles.css" media="screen">
     <script>
+        // EXERCISE 1
         alert("Hello World! I am an alert box.")
+
+        // EXERCISE 2
         const paragraph1 = document.getElementById("para1")
         const paragraph2 = document.getElementById("para2")
         console.log(paragraph1);
         console.log(paragraph2)
 
+        // EXERCISE 3
         // Replace with your JSON file URL - students
         const jsonURL = "https://raw.githubusercontent.com/mabaylanpatriciagrace1215/First-Repo/main/css%20folder/students.json";
 
-        fetch(jsonURL)
+        fetch(jsonURL) // Get URL 
         .then(response => response.json()) // Convert response to JSON
-        .then(data => {
-            let studentList = document.getElementById("student-list");
+        .then(data => { // Access the data
+            let studentList = document.getElementById("student-list"); //Get HTML element
 
             // Check if JSON contains 'students' array
             if (data.students && Array.isArray(data.students)) {
-                data.students.forEach(student => {
-                    let listItem = document.createElement("li");
-                    listItem.textContent = `${student.name} - ${student.age} (Course: ${student.course})`;
-                    studentList.appendChild(listItem);
+                data.students.forEach(student => { // loop through each student
+                    let listItem = document.createElement("li"); // create list 
+                    listItem.textContent = `${student.name} - ${student.age} (Course: ${student.course})`; // put text inside list item
+                    studentList.appendChild(listItem); // add it to the html
                 });
             } else {
-                console.error("Expected 'students' array but got:", data);
+                console.error("Expected 'students' array but got:", data); // error handling 
             }
         })
-        .catch(error => console.error("Error fetching JSON:", error));
+        .catch(error => console.error("Error fetching JSON:", error)); // catch errors
 
         // for course list
         const jsonURL1 = "https://raw.githubusercontent.com/mabaylanpatriciagrace1215/First-Repo/main/css%20folder/courses.json";

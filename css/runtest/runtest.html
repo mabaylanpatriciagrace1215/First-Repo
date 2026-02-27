@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Dynamic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>My Courses Portfolio</h1>
+
+<input type="text" id="searchBar" placeholder="Search course description...">
+
+<h3>Total Courses: <span id="totalCourses">0</span></h3>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Semester</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Credit</th>
+        </tr>
+    </thead>
+    <tbody id="courseTable">
+    </tbody>
+</table>
+
+<script>
+
+const jsonURL = "https://raw.githubusercontent.com/mabaylanpatriciagrace1215/First-Repo/main/css%20folder/students.json";
+
+fetch("courses.json")
+.then(response => response.json())
+.then(data => {
+
+    const table = document.getElementById("courseTable");
+    const totalCourses = document.getElementById("totalCourses");
+
+    totalCourses.textContent = data.courses.length;
+
+    data.courses.forEach(course => {
+
+        let row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${course.year_level}</td>
+            <td>${course.sem}</td>
+            <td>${course.code}</td>
+            <td>${course.description}</td>
+            <td>${course.credit}</td>
+        `;
+
+        table.appendChild(row);
+    });
+
+});
+
+// SEARCH FUNCTION
+document.getElementById("searchBar").addEventListener("keyup", function() {
+
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll("#courseTable tr");
+
+    rows.forEach(row => {
+        let description = row.children[3].textContent.toLowerCase();
+
+        if(description.includes(filter)){
+            row.style.display = "";
+            row.style.backgroundColor = "#d4f4dd";
+        } else {
+            row.style.display = "none";
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
